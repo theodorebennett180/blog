@@ -1,17 +1,15 @@
-// Placeholder film aesthetic images from Unsplash
+// Kyle's photos
 const placeholderImages = [
-    'https://images.unsplash.com/photo-1452857297128-d9c29adba80b?w=400',
-    'https://images.unsplash.com/photo-1501696461415-6bd6660c6742?w=400',
-    'https://images.unsplash.com/photo-1518895949257-7621c3c786d7?w=400',
-    'https://images.unsplash.com/photo-1505628346881-b72b27e84530?w=400',
-    'https://images.unsplash.com/photo-1533158326339-7f3cf2404354?w=400',
-    'https://images.unsplash.com/photo-1542281286-9e0a16bb7366?w=400',
-    'https://images.unsplash.com/photo-1516962126636-27ad087061cc?w=400',
-    'https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=400',
-    'https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?w=400',
-    'https://images.unsplash.com/photo-1469474968028-56623f02e42e?w=400',
-    'https://images.unsplash.com/photo-1447752875215-b2761acb3c5d?w=400',
-    'https://images.unsplash.com/photo-1441974231531-c6227db76b6e?w=400'
+    'images/img1.jpg',
+    'images/img2.jpg',
+    'images/img3.jpg',
+    'images/img4.jpg',
+    'images/img5.jpg',
+    'images/img6.jpg',
+    'images/img7.jpg',
+    'images/img8.jpg',
+    'images/img9.jpg',
+    'images/img10.jpg'
 ];
 
 const canvas = document.getElementById('canvas');
