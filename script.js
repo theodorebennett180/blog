@@ -41,21 +41,27 @@ function createMediaItem(src, index) {
     img.src = src;
     img.alt = 'aesthetic';
     
-    // Random positioning
-    const randomX = Math.random() * (window.innerWidth - 400);
+    // Wide range of sizes - from small to max viewport width
+    const sizeOptions = [
+        200, 250, 300, 350, 400,  // Small/medium
+        500, 600, 700, 800, 900,  // Large
+        1000, 1200, 1500, 1800, 2000  // Very large
+    ];
+    let randomSizePx = sizeOptions[Math.floor(Math.random() * sizeOptions.length)];
+    
+    // Cap size to viewport width
+    const maxWidth = window.innerWidth - 40; // 40px padding
+    if (randomSizePx > maxWidth) {
+        randomSizePx = maxWidth;
+    }
+    
+    // Random positioning - constrain to viewport width
+    const randomX = Math.random() * (window.innerWidth - randomSizePx);
     const randomY = Math.random() * (window.innerHeight * 1.5);
     
-    // Wide range of sizes - from small to max 2000px
-    const sizeOptions = [
-        '200px', '250px', '300px', '350px', '400px',  // Small/medium
-        '500px', '600px', '700px', '800px', '900px',  // Large
-        '1000px', '1200px', '1500px', '1800px', '2000px'  // Very large (capped at 2000px)
-    ];
-    const randomSize = sizeOptions[Math.floor(Math.random() * sizeOptions.length)];
-    
-    item.style.left = `${randomX}px`;
+    item.style.left = `${Math.max(0, randomX)}px`;
     item.style.top = `${randomY}px`;
-    item.style.width = randomSize;
+    item.style.width = `${randomSizePx}px`;
     item.style.zIndex = index;
     
     item.appendChild(img);
@@ -90,8 +96,13 @@ function startDrag(e) {
 function drag(e) {
     if (!draggedElement) return;
     
-    const x = e.clientX - offsetX;
+    let x = e.clientX - offsetX;
     const y = e.clientY - offsetY + window.scrollY;
+    
+    // Constrain horizontal position to viewport
+    const itemWidth = draggedElement.offsetWidth;
+    const maxX = window.innerWidth - itemWidth;
+    x = Math.max(0, Math.min(x, maxX));
     
     draggedElement.style.left = `${x}px`;
     draggedElement.style.top = `${y}px`;
@@ -117,5 +128,28 @@ function bringToFront(e) {
     clickedItem.style.zIndex = Math.min(maxZ + 1, 9998);
 }
 
+// Constrain all images to viewport on resize
+function constrainToViewport() {
+    const allItems = document.querySelectorAll('.media-item');
+    allItems.forEach(item => {
+        const itemWidth = item.offsetWidth;
+        const currentLeft = parseInt(item.style.left);
+        const maxX = window.innerWidth - itemWidth;
+        
+        // If item is now outside viewport, move it back in
+        if (currentLeft > maxX) {
+            item.style.left = `${Math.max(0, maxX)}px`;
+        }
+        
+        // Also ensure minimum size if needed
+        if (itemWidth > window.innerWidth - 40) {
+            item.style.width = `${window.innerWidth - 40}px`;
+        }
+    });
+}
+
 // Initialize on load
 window.addEventListener('load', init);
+
+// Handle window resize
+window.addEventListener('resize', constrainToViewport);
