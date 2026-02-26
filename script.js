@@ -39,11 +39,11 @@ function createMediaItem(src, index) {
     const randomX = Math.random() * (window.innerWidth - 400);
     const randomY = Math.random() * (window.innerHeight * 1.5);
     
-    // Wide range of sizes - from small to background-filling
+    // Wide range of sizes - from small to max 2000px
     const sizeOptions = [
         '200px', '250px', '300px', '350px', '400px',  // Small/medium
-        '500px', '600px', '700px',                     // Large
-        '80vw', '90vw', '100vw'                        // Background-filling
+        '500px', '600px', '700px', '800px', '900px',  // Large
+        '1000px', '1200px', '1500px', '1800px', '2000px'  // Very large (capped at 2000px)
     ];
     const randomSize = sizeOptions[Math.floor(Math.random() * sizeOptions.length)];
     
