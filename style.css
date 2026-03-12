@@ -9,7 +9,7 @@ body {
     background: #000000;
     overflow-x: hidden;
     overflow-y: auto;
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%23ff00ff" opacity="0.5"/></svg>'), auto;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%23ff00ff" opacity="0.5"/></svg>') 12 12, auto;
 }
 
 .canvas {
@@ -30,12 +30,12 @@ body {
     mix-blend-mode: difference;
     color: white;
     letter-spacing: 2px;
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%23ff00ff" opacity="0.5"/></svg>'), auto;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%23ff00ff" opacity="0.5"/></svg>') 12 12, auto;
 }
 
 .media-item {
     position: absolute;
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%23ff00ff" opacity="0.5"/></svg>'), auto;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%23ff00ff" opacity="0.5"/></svg>') 12 12, auto;
 }
 
 .media-item.dragging {
@@ -65,7 +65,7 @@ body {
     font-size: 12px;
     text-transform: lowercase;
     letter-spacing: 2px;
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%23ff00ff" opacity="0.5"/></svg>'), auto;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%23ff00ff" opacity="0.5"/></svg>') 12 12, auto;
     z-index: 9999;
     mix-blend-mode: difference;
 }
@@ -85,7 +85,7 @@ body {
     font-size: 14px;
     text-transform: lowercase;
     letter-spacing: 2px;
-    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%23ff00ff" opacity="0.5"/></svg>'), auto;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%23ff00ff" opacity="0.5"/></svg>') 12 12, auto;
     z-index: 10000;
     mix-blend-mode: difference;
     padding: 10px 15px;
