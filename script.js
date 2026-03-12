@@ -180,6 +180,9 @@ function showListView() {
     randomizeBtn.style.display = 'none';
     listBtn.style.display = 'none';
     
+    // Scroll to top
+    window.scrollTo(0, 0);
+    
     // Populate list view if not already done
     if (listView.children.length === 1) { // Only title exists
         placeholderImages.forEach((imgUrl) => {
@@ -202,6 +205,9 @@ function showCollageView() {
     listView.classList.remove('active');
     randomizeBtn.style.display = 'block';
     listBtn.style.display = 'block';
+    
+    // Scroll to top
+    window.scrollTo(0, 0);
 }
 
 // Initialize on load
