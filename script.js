@@ -156,6 +156,18 @@ function constrainToViewport() {
     });
 }
 
+// Handle title click - reload on homepage, return to collage on list view
+function handleTitleClick() {
+    const listView = document.getElementById('listView');
+    const isListView = listView.classList.contains('active');
+    
+    if (isListView) {
+        showCollageView();
+    } else {
+        location.reload();
+    }
+}
+
 // Show list view
 function showListView() {
     const canvas = document.getElementById('canvas');
@@ -169,7 +181,7 @@ function showListView() {
     listBtn.style.display = 'none';
     
     // Populate list view if not already done
-    if (listView.children.length === 0) {
+    if (listView.children.length === 1) { // Only title exists
         placeholderImages.forEach((imgUrl) => {
             const img = document.createElement('img');
             img.src = imgUrl;
