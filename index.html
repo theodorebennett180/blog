@@ -8,8 +8,13 @@
 </head>
 <body>
     <div class="canvas" id="canvas">
-        <div class="title">stream of consciousness</div>
-        <button class="randomize-btn" onclick="location.reload()">randomize</button>
+        <div class="title" id="title" onclick="showCollageView()">stream of consciousness</div>
+        <button class="list-btn" id="listBtn" onclick="showListView()">☰</button>
+        <button class="randomize-btn" id="randomizeBtn" onclick="location.reload()">randomize</button>
+    </div>
+    
+    <div class="list-view" id="listView">
+        <!-- List view will be populated by JavaScript -->
     </div>
     
     <script src="script.js"></script>

@@ -30,6 +30,7 @@ body {
     mix-blend-mode: difference;
     color: white;
     letter-spacing: 2px;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%23ff00ff" opacity="0.5"/></svg>'), auto;
 }
 
 .media-item {
@@ -71,6 +72,48 @@ body {
 
 .randomize-btn:hover {
     opacity: 0.8;
+}
+
+.list-btn {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    padding: 8px 16px;
+    background: transparent;
+    border: 2px solid white;
+    color: white;
+    font-family: 'Courier New', monospace;
+    font-size: 18px;
+    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24"><circle cx="12" cy="12" r="10" fill="%23ff00ff" opacity="0.5"/></svg>'), auto;
+    z-index: 9999;
+    mix-blend-mode: difference;
+}
+
+.list-btn:hover {
+    opacity: 0.8;
+}
+
+.list-view {
+    display: none;
+    padding: 80px 40px 40px 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.list-view.active {
+    display: block;
+}
+
+.list-view img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 40px;
+    display: block;
+}
+
+.canvas.hidden {
+    display: none;
 }
 
 /* Early 2000s aesthetic touches */

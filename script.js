@@ -156,6 +156,42 @@ function constrainToViewport() {
     });
 }
 
+// Show list view
+function showListView() {
+    const canvas = document.getElementById('canvas');
+    const listView = document.getElementById('listView');
+    const randomizeBtn = document.getElementById('randomizeBtn');
+    const listBtn = document.getElementById('listBtn');
+    
+    canvas.classList.add('hidden');
+    listView.classList.add('active');
+    randomizeBtn.style.display = 'none';
+    listBtn.style.display = 'none';
+    
+    // Populate list view if not already done
+    if (listView.children.length === 0) {
+        placeholderImages.forEach((imgUrl) => {
+            const img = document.createElement('img');
+            img.src = imgUrl;
+            img.alt = 'aesthetic';
+            listView.appendChild(img);
+        });
+    }
+}
+
+// Show collage view
+function showCollageView() {
+    const canvas = document.getElementById('canvas');
+    const listView = document.getElementById('listView');
+    const randomizeBtn = document.getElementById('randomizeBtn');
+    const listBtn = document.getElementById('listBtn');
+    
+    canvas.classList.remove('hidden');
+    listView.classList.remove('active');
+    randomizeBtn.style.display = 'block';
+    listBtn.style.display = 'block';
+}
+
 // Initialize on load
 window.addEventListener('load', init);
 
