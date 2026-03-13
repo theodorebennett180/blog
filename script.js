@@ -183,9 +183,9 @@ function showListView() {
     // Scroll to top
     window.scrollTo(0, 0);
     
-    // Populate list view if not already done
+    // Populate list view if not already done (newest first)
     if (listView.children.length === 1) { // Only title exists
-        placeholderImages.forEach((imgUrl) => {
+        placeholderImages.slice().reverse().forEach((imgUrl) => {
             const img = document.createElement('img');
             img.src = imgUrl;
             img.alt = 'aesthetic';
