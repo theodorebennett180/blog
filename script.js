@@ -25,7 +25,8 @@ const placeholderImages = [
     'images/img23.jpg',
     'images/img24.jpg',
     'images/img25.jpg',
-    'images/img26.jpg'
+    'images/img26.jpg',
+    'images/img27.jpg'
 ];
 
 const canvas = document.getElementById('canvas');
